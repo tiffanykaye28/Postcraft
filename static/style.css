@@ -49,15 +49,15 @@ main {
     padding: 40px 20px;
 }
 
-/* === Posts === */
+/* === Posts (Made BIGGER) === */
 .post-container {
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px; /* Increased max-width */
 }
 
 .post-card {
     background-color: white;
-    padding: 35px;          /* bigger padding */
+    padding: 40px;          /* Increased padding */
     margin-bottom: 40px;    /* more space between posts */
     border-radius: 15px;    /* slightly rounder corners */
     box-shadow: 0 12px 25px rgba(0,0,0,0.1);
@@ -143,13 +143,13 @@ main {
 }
 
 
-/* === Forms === */
+/* === Forms (General) === */
 .form-container {
     background-color: white;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    max-width: 400px;
+    max-width: 600px; /* Made form container wider */
     width: 100%;
     text-align: center;
 }
@@ -167,6 +167,13 @@ main {
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 0.95rem;
+}
+
+/* === Create Post Textarea (Made BIGGER) === */
+.form-container textarea {
+    min-height: 350px; /* Significantly increased the height */
+    resize: vertical;
+    text-align: left;
 }
 
 .form-container button {
@@ -212,6 +219,65 @@ main {
     border-radius: 8px;
     margin-bottom: 10px;
     border: 1px solid #ffeeba;
+}
+
+/* === Share Buttons === */
+.share-options {
+    margin: 20px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.share-options h4 {
+    margin-bottom: 10px;
+    color: #4a90e2;
+}
+
+.share-link {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-right: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.twitter {
+    background-color: #1DA1F2;
+    color: white;
+}
+.twitter:hover {
+    background-color: #1789c9;
+}
+
+.facebook {
+    background-color: #4267B2;
+    color: white;
+}
+.facebook:hover {
+    background-color: #385898;
+}
+
+.copy-link {
+    background-color: #7f8c8d;
+    color: white;
+    border: none;
+}
+.copy-link:hover {
+    background-color: #6b7677;
+}
+
+/* === Login Prompt for Comments === */
+.login-prompt {
+    padding: 15px;
+    background-color: #f0f0ff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 15px;
 }
 
 /* === Footer === */

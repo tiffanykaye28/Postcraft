@@ -72,6 +72,16 @@ def index():
     posts = Post.query.order_by(Post.date_posted.desc()).all()
     return render_template('index.html', posts=posts)
 
+# Placeholder route for viewing a single post (needed for sharing links)
+@app.route('/post/<int:post_id>')
+def view_post(post_id):
+    post = Post.query.get_or_404(post_id)
+    # In a real application, you would render a 'post.html' template here.
+    # For now, we flash a message and redirect back to the index.
+    flash(f"Viewing post '{post.title}'. The full post detail page is not yet implemented.", 'info')
+    return redirect(url_for('index'))
+
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -120,6 +130,7 @@ def add_post():
 @login_required
 def add_comment(post_id):
     content = request.form['content']
+    # The login check is enforced by @login_required, ensuring only logged-in users can reach this logic.
     new_comment = Comment(content=content, post_id=post_id, user_id=current_user.id)
     db.session.add(new_comment)
     db.session.commit()
